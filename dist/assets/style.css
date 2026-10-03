@@ -122,3 +122,40 @@ main,section,.hero-copy,.hero-media,.intro-content,.faq-list,.contact-heading,.c
  .rating-summary{gap:12px;flex-wrap:wrap}
  .hero-copy h1{font-size:2.9rem}
 }
+
+/* Framing and mobile controls */
+.hero-media img{object-position:center top}
+.arrow-up,.arrow-down,.arrow-up-straight{display:inline-block;position:relative;width:.9em;height:.9em;margin-left:1em;flex:0 0 auto;font-size:1em;line-height:1}
+.arrow-up:before,.arrow-down:before,.arrow-up-straight:before{content:"";position:absolute;width:.5em;height:.5em;border-top:1.5px solid currentColor;border-right:1.5px solid currentColor;right:.1em;top:.1em}
+.arrow-up:after,.arrow-down:after,.arrow-up-straight:after{content:"";position:absolute;width:.75em;height:1.5px;background:currentColor;top:.54em;left:.08em;transform:rotate(-45deg);transform-origin:left center}
+.arrow-down:before{top:.28em;transform:rotate(90deg)}.arrow-down:after{top:.36em;transform:rotate(45deg)}
+.arrow-up-straight:before{right:.19em;transform:rotate(-45deg)}.arrow-up-straight:after{left:.43em;top:.1em;transform:rotate(90deg)}
+.header-cta .arrow-up{display:none}
+@media(max-width:760px){
+ .header{height:68px;padding:0 16px;gap:8px}
+ .header .brand{flex:0 1 158px;width:158px;min-width:0;height:34px}
+ .header .brand-logo{width:186px;top:-54px;left:-11px}
+ .header-cta{display:inline-flex;margin-left:auto;min-height:40px;padding:0 10px;font-size:.73rem;white-space:nowrap}
+ .header .menu-toggle{order:0;width:40px;height:40px;margin:0;border-radius:0}
+ .header .nav-booking{display:none}
+ .hero{display:flex;flex-direction:column}
+ .hero-copy{order:0;padding:36px 22px 34px}
+ .hero-media{order:1;height:390px;min-height:390px;max-height:none}
+ .hero-media img{object-position:center top}
+ .hero-kicker{margin:24px 0 14px}
+ .hero-copy h1{font-size:clamp(3rem,11vw,3.8rem);line-height:1;overflow-wrap:normal}
+ .hero-foot{padding-top:28px}
+ .hero-actions{gap:12px}
+ .hero-actions .text-link{align-self:flex-start}
+ .floating-wa{display:flex!important;position:fixed!important;inset:auto 14px calc(12px + env(safe-area-inset-bottom,0px)) 14px!important;z-index:1000;min-height:54px;align-items:center;border-radius:4px;box-shadow:0 8px 25px #0005}
+ body{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
+ footer{padding-bottom:40px}
+}
+@media(max-width:390px){
+ .header .brand{flex-basis:134px;width:134px;height:30px}
+ .header .brand-logo{width:162px;top:-47px;left:-10px}
+ .header-cta{font-size:.69rem;padding:0 8px}
+ .header .menu-toggle{width:36px;height:36px}
+ .hero-media{height:330px;min-height:330px}
+ .hero-copy h1{font-size:clamp(2.75rem,11.8vw,3.25rem)}
+}
