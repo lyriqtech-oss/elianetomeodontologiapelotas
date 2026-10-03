@@ -167,3 +167,21 @@ main,section,.hero-copy,.hero-media,.intro-content,.faq-list,.contact-heading,.c
 /* Contact stays in the header and content. No overlay on narrow screens. */
 .floating-wa{display:none!important}
 @media(max-width:760px){body{padding-bottom:0}footer{padding-bottom:36px}}
+
+/* Mobile portrait: show the photograph at its natural ratio with no crop. */
+@media(max-width:760px){
+ .header{height:72px}
+ .header nav{max-height:calc(100dvh - 72px)}
+ .hero-copy{padding:30px 22px 32px}
+ .hero-copy .eyebrow{display:none}
+ .hero-kicker{margin:0 0 15px;letter-spacing:.075em;line-height:1.55}
+ .hero-copy h1{font-size:clamp(3.1rem,11vw,3.7rem);line-height:1.02;margin-bottom:17px}
+ .hero-lead{line-height:1.55}
+ .hero-actions{margin-top:21px;gap:12px}
+ .hero-foot{display:none}
+ .hero-media{order:1;position:relative;height:auto!important;min-height:0!important;max-height:none!important;margin:0 20px 36px;overflow:hidden;background:#d7ccc1}
+ .hero-media img{position:relative;width:100%;height:auto;object-fit:contain;object-position:center;max-height:none}
+ .hero-media .photo-caption{bottom:12px;right:12px}
+ .trust-strip{padding:23px 20px}
+}
+@media(max-width:390px){.hero-copy h1{font-size:clamp(2.75rem,11.8vw,3.2rem)}}
