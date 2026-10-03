@@ -159,3 +159,11 @@ main,section,.hero-copy,.hero-media,.intro-content,.faq-list,.contact-heading,.c
  .hero-media{height:330px;min-height:330px}
  .hero-copy h1{font-size:clamp(2.75rem,11.8vw,3.25rem)}
 }
+
+/* Small vector arrows are consistent across Android, iOS and desktop. */
+.icon-arrow{width:1.05em;height:1.05em;display:inline-block;vertical-align:-.16em;margin-left:.55em;flex:none;overflow:visible}
+.button .icon-arrow,.text-link .icon-arrow,.header-cta .icon-arrow{margin-left:1em}
+.header-cta .icon-arrow{display:none}
+/* Contact stays in the header and content. No overlay on narrow screens. */
+.floating-wa{display:none!important}
+@media(max-width:760px){body{padding-bottom:0}footer{padding-bottom:36px}}
