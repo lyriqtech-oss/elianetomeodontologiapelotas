@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eliane-tome-pelotas.rogerioweymar.chatgpt.site/sitemap.xml
